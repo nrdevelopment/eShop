@@ -1,0 +1,22 @@
+{
+  "name": "nrdev-eshop",
+  "version": "1.0.1",
+  "description": "Ecommerce helper for creating shops",
+  "main": "eShop.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nrdevelopment/eShop.git"
+  },
+  "keywords": [
+    "shop"
+  ],
+  "author": "Niklas Raczek",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nrdevelopment/eShop/issues"
+  },
+  "homepage": "https://github.com/nrdevelopment/eShop#readme"
+}

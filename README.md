@@ -4,12 +4,12 @@ Its an kind of ecommerce helper where you can create an eShop with EShopItems an
 
 # Installation
 
-`npm i eshop --save`
+`npm i nrdev-eshop --save`
 
 Then...
 
 ```
-import { EShop } from 'eShop';
+import { EShop } from 'nrdev-eShop';
 
 const shop = new EShop();
 shop.handle();
