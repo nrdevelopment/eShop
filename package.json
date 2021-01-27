@@ -1,6 +1,6 @@
 {
   "name": "nrdev-eshop",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Ecommerce helper for creating shops",
   "main": "eShop.js",
   "scripts": {
