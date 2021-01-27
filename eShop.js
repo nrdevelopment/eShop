@@ -3,7 +3,7 @@ import { EShopItem } from './eShopItem.js';
 import { EShoppingCart } from './eShoppingCart.js';
 
 
-function EShop() {
+export function EShop() {
 
     /**ShoppingCart of this shop. */
     let shoppingCart = new EShoppingCart();
@@ -185,5 +185,3 @@ function EShop() {
 
 
 }
-
-module.exports.EShop = EShop;
