@@ -168,6 +168,47 @@ export function EShop() {
     }
 
 
+    /**
+     * Getting a collection from shop by id.
+     * @param {Number} id ID of the collection.
+     * @throws {Error{msg}} if the id is null.
+     * @returns ECollection if found and false if not.
+     */
+    this.getCollection = function(id) {
+        if(id === null) { throw {msg:"id must not be null"}};
+        for(let count = 0; count < collections.length; count++) {
+            if(collections[count].id === id) {
+                return collections[count];
+            }
+        }
+        return false;
+    }
+
+
+    /**
+     * Getting an item from the EShop by the id.
+     * @param {Number} id of the EShopItem.
+     * @throws {Error{msg}} if the id is null.
+     * @returns EShopItem if found and false if not.
+     */
+    this.getItem = function(id) {
+        if(id === null) { throw {msg:"id must not be null"}};
+        for(let count = 0; count < allItems.length; count++) {
+            if(allItems[count].id === id) {
+                return allItems[count];
+            }
+        }
+        return false;
+    }
+
+
+    /**
+     * @returns the list of collections in this shop.
+     */
+    this.getAllCollections = function() {
+        return collections;
+    }
+
 
     /**
      * @returns the shopping cart of this shop.

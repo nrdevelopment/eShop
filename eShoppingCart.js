@@ -69,10 +69,23 @@ export function EShoppingCart() {
 
 
     /**
-     * Getting the amount of items in the shopping cart.
+     * @returns the amount of EShopItems inside the shopping cart. 
      */
     this.getItemAmount = function() {
         return items.length;
+    }
+
+    /**
+     * @returns the amount of the shopping cart if you have 10times the same shoe its 1 item with amount of 10 so it returns 10.
+     */
+    this.getAmount = function() {
+        let amount = 0;
+        if(items.length > 0) {
+            items.forEach( function(item, index) {
+                amount += item.amount;
+            });
+        }
+        return amount;
     }
 
 
@@ -90,11 +103,21 @@ export function EShoppingCart() {
         return amount;
     }
 
+
+    /**
+     * @returns the List of items inside this shopping cart.
+     */
+    this.getItemsInCart = function() {
+        return items;
+    }
+
+
     /**
      * Clearing the shopping cart.
      */
     this.clear = function() {
         items.length = 0;
     }
+
 
 }

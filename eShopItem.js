@@ -18,6 +18,31 @@ export function EShopItem(id, name, singlePrice) {
 
 
     /**
+     * Adding a Property to the EShopItem. THIS ADDS AUTOMATICALLY a getName and setName function.
+     * @param {String} name 
+     * @param {Object} value Value of the property can be String, number, object ... can also be a function.
+     * @throws {Error{msg}} Nullpointer if the name or value is null and IllegalArgument if the name isn't a String.
+     */
+    this.addProperty = function(name, value) {
+        if(name === null || value === null) { throw {msg:"name or value must not be null!"}};
+        if(!(typeof name === 'string')) { throw {msg:"name MUST be a String!"}};
+
+        this[name] = value;
+        let functionName = name.charAt(0).toUpperCase() + name.slice(1);
+
+        this["set"+functionName] = function (value) {
+            if(value === null) { throw {msg:"value must not be null!"}};
+            this[name] = value;
+        }
+
+        this["get"+functionName] = function() {
+            return this[name];
+        }
+
+    }
+
+
+    /**
      * Increasing the amount of this item by 1.
      */
     this.increaseAmount = function() {

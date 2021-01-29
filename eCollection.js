@@ -80,6 +80,23 @@ export function ECollection(id, name, description) {
 
 
     /**
+     * Getting an item from the collection by id.
+     * @param {Number} id Id of the item
+     * @throws {Error{msg}} if the id is null.
+     * @returns EShopItem if found and false if not.
+     */
+    this.getCollItem = function(id) {
+        if(id === null) { throw {msg:"id must not be null"}};
+        for(let count = 0; count < items.length; count++) {
+            if(items[count].id === id) {
+                return items[count];
+            }
+        }
+        return false;
+    }
+
+
+    /**
      * @returns Returning the array filled with EShopItems;
      */
     this.getItems = function() {
